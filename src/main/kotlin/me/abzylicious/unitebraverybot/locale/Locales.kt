@@ -34,6 +34,12 @@ object Labels {
     const val CONFIGURATION_LANE_RANDOMIZATION = "Randomize Lane"
     const val CONFIGURATION_HELD_ITEMS_RANDOMIZATION = "Randomize Held Items"
     const val CONFIGURATION_BATTLE_ITEM_RANDOMIZATION = "Randomize Battle Items"
+    const val BRAVERY_BUILD_TITLE = "Your Pokemon has been chosen!"
+    const val BRAVERY_BUILD_DESCRIPTION = "During your next match you have to pick the following Pokemon: **${Templates.POKEMON}**"
+    const val BRAVERY_BUILD_LANE = "Lane"
+    const val BRAVERY_BUILD_HELD_ITEMS = "Held Items"
+    const val BRAVERY_BUILD_BATTLE_ITEMS = "Battle Item"
+    const val BRAVERY_BUILD_REROLL = "Reroll"
 }
 
 object Messages {
@@ -70,4 +76,5 @@ object CommandDescriptions {
     const val CONFIGURATION_SET_LANE_RANDOMIZATION = "Set Lane randomization"
     const val CONFIGURATION_SET_HELD_ITEMS_RANDOMIZATION = "Set Held Items randomization"
     const val CONFIGURATION_SET_BATTLE_ITEM_RANDOMIZATION = "Set Battle Item randomization"
+    const val BRAVERY_ROLL = "Get a spicy build for your next Pokemon Unite match"
 }
