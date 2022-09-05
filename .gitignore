@@ -5,6 +5,9 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
+### Project ###
+.env
+
 ### IntelliJ IDEA ###
 .idea/
 *.iws

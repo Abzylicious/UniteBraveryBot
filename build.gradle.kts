@@ -1,12 +1,14 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
-plugins {
-    kotlin("jvm") version "1.7.10"
-    application
-}
+import java.util.Properties
 
 group = "me.abzylicious"
 version = "1.0-SNAPSHOT"
+description = "A Discord bot heavily inspired by Ultimate Bravery to spice up your Pokemon Unite experience."
+
+plugins {
+    kotlin("jvm") version "1.7.10"
+    kotlin("plugin.serialization") version "1.7.10"
+    id("com.github.johnrengelman.shadow") version "7.0.0"
+}
 
 repositories {
     mavenCentral()
@@ -14,16 +16,32 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+    implementation("me.jakejmattson:DiscordKt:0.23.4")
+    implementation("org.jsoup:jsoup:1.15.3")
 }
 
 tasks.test {
     useJUnitPlatform()
 }
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "1.8"
-}
+tasks {
+    compileKotlin {
+        kotlinOptions.jvmTarget = "1.8"
 
-application {
-    mainClass.set("MainKt")
+        Properties().apply {
+            setProperty("name", project.name)
+            setProperty("description", project.description)
+            setProperty("version", version.toString())
+            setProperty("url", "https://github.com/Abzylicious/UniteBraveryBot")
+
+            store(file("src/main/resources/bot.properties").outputStream(), null)
+        }
+    }
+
+    shadowJar {
+        archiveFileName.set("UniteBraveryBot.jar")
+        manifest {
+            attributes("Main-Class" to "me.abzylicious.unitebraverybot.MainKt")
+        }
+    }
 }
