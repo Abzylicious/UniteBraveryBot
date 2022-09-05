@@ -5,6 +5,18 @@
 |-------------|--------------------------------|
 | [Argument]  | Argument is not required.      |
 
+## Configuration
+| Commands                   | Arguments | Description                                 |
+|----------------------------|-----------|---------------------------------------------|
+| configuration              |           | Show the current guild configuration        |
+| configure                  |           | Configure this guild to use this bot        |
+| setadminrole               | Role      | Set the bots admin role for this guild      |
+| setbattleitemrandomization |           | Set Battle Item randomization               |
+| sethelditemsrandomization  |           | Set Held Items randomization                |
+| setlanerandomization       |           | Set Lane randomization                      |
+| setloggingchannel          | Channel   | Set the bots logging channel for this guild |
+| setprefix                  | Text      | Set the bots prefix for this guild          |
+
 ## Utility
 | Commands | Arguments | Description                  |
 |----------|-----------|------------------------------|
