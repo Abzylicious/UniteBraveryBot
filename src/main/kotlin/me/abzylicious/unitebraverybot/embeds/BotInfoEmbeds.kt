@@ -1,7 +1,7 @@
 package me.abzylicious.unitebraverybot.embeds
 
 import dev.kord.rest.builder.message.EmbedBuilder
-import me.abzylicious.unitebraverybot.BotStatisticsService
+import me.abzylicious.unitebraverybot.services.BotStatisticsService
 import me.jakejmattson.discordkt.commands.DiscordContext
 import me.jakejmattson.discordkt.extensions.addInlineField
 import me.jakejmattson.discordkt.extensions.pfpUrl

@@ -1,4 +1,4 @@
-package me.abzylicious.unitebraverybot
+package me.abzylicious.unitebraverybot.services
 
 import me.abzylicious.unitebraverybot.util.timeToString
 import me.jakejmattson.discordkt.Discord
