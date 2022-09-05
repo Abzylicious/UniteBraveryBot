@@ -5,6 +5,7 @@ import dev.kord.common.entity.Permission
 import dev.kord.common.entity.Permissions
 import dev.kord.gateway.PrivilegedIntent
 import me.abzylicious.unitebraverybot.dataclasses.Configuration
+import me.abzylicious.unitebraverybot.embeds.createBotInformationEmbed
 import me.abzylicious.unitebraverybot.locale.BotConstants
 import me.abzylicious.unitebraverybot.locale.Messages
 import me.jakejmattson.discordkt.dsl.bot
@@ -36,6 +37,10 @@ fun main(args: Array<String>) {
             dualRegistry = true
             theme = Color(255, 119, 15)
             defaultPermissions = Permissions(Permission.UseApplicationCommands, Permission.UseEmbeddedActivities)
+        }
+
+        mentionEmbed {
+            createBotInformationEmbed(it)
         }
 
         presence {
