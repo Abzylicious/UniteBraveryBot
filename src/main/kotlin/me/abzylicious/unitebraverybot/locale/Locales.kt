@@ -11,3 +11,7 @@ object BotConstants {
 object Messages {
     const val NO_TOKEN_PROVIDED = "Expected the bot token as argument or an environment variable"
 }
+
+object CommandDescriptions {
+    const val UTILITY_PING = "Check the status of the bot"
+}
