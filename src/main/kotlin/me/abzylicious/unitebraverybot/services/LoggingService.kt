@@ -11,11 +11,12 @@ import me.jakejmattson.discordkt.extensions.toSnowflake
 @Service
 class LoggingService(private val configuration: Configuration, private val discord: Discord) {
     suspend fun log(guild: Guild, message: String) = getLoggingChannel(guild)?.createMessage(message)
-    suspend fun log(channelId: String, message: String) = getLoggingChannel(channelId)?.createMessage(message)
+    suspend fun logToAllGuilds(message: String) = configuration.guildConfigurations.forEach { log(it.value.loggingChannel, message) }
+    private suspend fun log(channelId: String, message: String) = getLoggingChannel(channelId)?.createMessage(message)
 
     private suspend fun getLoggingChannel(guild: Guild): TextChannel? {
         val loggingChannel = configuration[guild.id]?.loggingChannel ?: return null
-        val channelId = loggingChannel.takeIf { it!!.isNotEmpty() } ?: return null
+        val channelId = loggingChannel.takeIf { it.isNotEmpty() } ?: return null
         return guild.getChannelOf(channelId.toSnowflake())
     }
 

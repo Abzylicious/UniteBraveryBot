@@ -5,6 +5,7 @@ object BotConstants {
     const val DEFAULT_PREFIX = "DEFAULT_PREFIX"
     const val DEFAULT_PREFIX_VALUE = "brave!"
     const val CONFIGURATION_DATA_PATH = "data/config.json"
+    const val POKEMON_DATA_PATH = "data/pokemon.json"
     const val PRESENCE_PLAYING = "with brave Pokemon picks & builds"
 }
 
@@ -13,6 +14,8 @@ object Templates {
     const val PREFIX = "%PREFIX%"
     const val ROLE = "%AROLE%"
     const val CHANNEL = "%CHANNEL%"
+    const val POKEMON = "%POKEMON%"
+    const val POKEMON_COUNT = "%POKEMON_COUNT%"
 }
 
 object Labels {
@@ -51,6 +54,10 @@ object Messages {
     const val CONFIGURATION_SET_LANE_RANDOMIZATION = "Set Lane randomization"
     const val CONFIGURATION_SET_HELD_ITEMS_RANDOMIZATION = "Set Held Items randomization"
     const val CONFIGURATION_SET_BATTLE_ITEM_RANDOMIZATION = "Set Battle Items randomization"
+    const val UPDATE_POKEMON_FETCH = "Fetching Pokemon ..."
+    const val UPDATE_POKEMON_UPDATING = "Found **${Templates.POKEMON_COUNT}** pokemon! Updating ..."
+    const val UPDATE_POKEMON_DONE = "Update finished!"
+    const val STARTUP_LOG = "Bot successfully initialized!"
 }
 
 object CommandDescriptions {
