@@ -11,6 +11,7 @@ import me.abzylicious.unitebraverybot.locale.Templates
 import me.abzylicious.unitebraverybot.services.BraveryService
 import me.jakejmattson.discordkt.dsl.MenuBuilder
 import me.jakejmattson.discordkt.extensions.addField
+import me.jakejmattson.discordkt.extensions.fullName
 import me.jakejmattson.discordkt.extensions.pfpUrl
 
 suspend fun MenuBuilder.createBraveryBuildEmbed(author: User, guildId: Snowflake, braveryService: BraveryService) {
@@ -31,8 +32,13 @@ private fun EmbedBuilder.createBraveryBuildEmbed(author: User, braveryBuild: Bra
     val decodedColor = java.awt.Color.decode(braveryBuild.pokemon.role.color)
     color = decodedColor.kColor
 
+    author {
+        name = author.fullName
+        icon = author.pfpUrl
+    }
+
     thumbnail {
-        url = author.pfpUrl
+        url = braveryBuild.pokemon.imageUrl
     }
 
     title = Labels.BRAVERY_BUILD_TITLE
@@ -46,6 +52,4 @@ private fun EmbedBuilder.createBraveryBuildEmbed(author: User, braveryBuild: Bra
 
     if (braveryBuild.battleItem != null)
         addField(Labels.BRAVERY_BUILD_BATTLE_ITEMS, braveryBuild.battleItem.item)
-
-    image = braveryBuild.pokemon.imageUrl
 }
