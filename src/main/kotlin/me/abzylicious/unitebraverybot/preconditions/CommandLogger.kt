@@ -5,7 +5,7 @@ import me.jakejmattson.discordkt.dsl.precondition
 
 @Suppress("unused")
 fun commandLogger(loggingService: LoggingService) = precondition {
-    command ?: return@precondition fail()
+    command ?: return@precondition
 
     val guild = guild ?: return@precondition
     val commandName = command!!.name.lowercase()
