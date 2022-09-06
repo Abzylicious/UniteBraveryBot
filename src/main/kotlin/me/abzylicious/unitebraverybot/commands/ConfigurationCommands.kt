@@ -85,43 +85,4 @@ fun configurationCommands(configuration: Configuration) = subcommand("configurat
             respond(Messages.CONFIGURATION_SET_LOGGING_CHANNEL.replace(Templates.CHANNEL, channel.name))
         }
     }
-
-    sub("lanerandomization", CommandDescriptions.CONFIGURATION_LANE_RANDOMIZATION) {
-        execute {
-            if (!configuration.hasGuildConfiguration(guild.id)) {
-                respond(Messages.GUILD_CONFIGURATION_NOT_FOUND)
-                return@execute
-            }
-
-            ConfigurationConversation(configuration)
-                .createLaneRandomizationConfigurationConversation(guild.id)
-                .startSlashResponse(discord, author, this)
-        }
-    }
-
-    sub("helditemsrandomization", CommandDescriptions.CONFIGURATION_HELD_ITEMS_RANDOMIZATION) {
-        execute {
-            if (!configuration.hasGuildConfiguration(guild.id)) {
-                respond(Messages.GUILD_CONFIGURATION_NOT_FOUND)
-                return@execute
-            }
-
-            ConfigurationConversation(configuration)
-                .createHeldItemsRandomizationConfigurationConversation(guild.id)
-                .startSlashResponse(discord, author, this)
-        }
-    }
-
-    sub("battleitemrandomization", CommandDescriptions.CONFIGURATION_BATTLE_ITEM_RANDOMIZATION) {
-        execute {
-            if (!configuration.hasGuildConfiguration(guild.id)) {
-                respond(Messages.GUILD_CONFIGURATION_NOT_FOUND)
-                return@execute
-            }
-
-            ConfigurationConversation(configuration)
-                .createBattleItemsRandomizationConfigurationConversation(guild.id)
-                .startSlashResponse(discord, author, this)
-        }
-    }
 }
