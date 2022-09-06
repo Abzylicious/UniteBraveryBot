@@ -14,7 +14,6 @@ private object Constants {
     const val POKEMON_NAME_CLASS = "pokemon-card__name"
     const val POKEMON_ROLE_NAME_ATTRIBUTE = "data-pokemon-battle-type"
     const val POKEMON_ROLE_ID_ATTRIBUTE = "data-role-id"
-    const val POKEMON_IMAGE_SELECTOR = ".pokemon-card__character > img"
     const val BACKGROUND_COLOR_PREFIX = "--background-color:"
 }
 
@@ -37,7 +36,8 @@ class PokemonScraper {
     private fun buildPokemon(element: Element, roleColors: List<RoleColor>) = Pokemon(
         getPokemonName(element),
         getPokemonRole(element, roleColors),
-        getPokemonImage(element)
+        // Fixme: Get Pokemon image
+        ""
     )
 
     private fun getPokemonName(element: Element) = element.getElementsByClass(Constants.POKEMON_NAME_CLASS).text()
@@ -49,10 +49,6 @@ class PokemonScraper {
         val roleColor = roleColors.find { it.id == roleId }!!.color
         return PokemonRole(role, roleColor)
     }
-
-    private fun getPokemonImage(element: Element) = element.select(Constants.POKEMON_IMAGE_SELECTOR)
-        .attr("src")
-        .replace("../..", Constants.BASE_URL)
 
     private fun fetchRoleColors() = URL(Constants.POKEMON_STYLESHEET_URL)
         .readText()
