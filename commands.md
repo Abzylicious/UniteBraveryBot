@@ -7,16 +7,20 @@
 | /Category   | This is a subcommand group.    |
 
 ## /configuration
-| Commands                | Arguments      | Description                                 |
-|-------------------------|----------------|---------------------------------------------|
-| adminrole               | AdminRole      | Set the bots admin role for this guild      |
-| battleitemrandomization |                | Set Battle Item randomization               |
-| helditemsrandomization  |                | Set Held Items randomization                |
-| lanerandomization       |                | Set Lane randomization                      |
-| loggingchannel          | LoggingChannel | Set the bots logging channel for this guild |
-| prefix                  | Prefix         | Set the bots prefix for this guild          |
-| setup                   |                | Configure this guild to use this bot        |
-| show                    |                | Show the current guild configuration        |
+| Commands       | Arguments      | Description                                 |
+|----------------|----------------|---------------------------------------------|
+| adminrole      | AdminRole      | Set the bots admin role for this guild      |
+| loggingchannel | LoggingChannel | Set the bots logging channel for this guild |
+| prefix         | Prefix         | Set the bots prefix for this guild          |
+| setup          |                | Configure this guild to use this bot        |
+| show           |                | Show the current guild configuration        |
+
+## /randomizer
+| Commands   | Arguments | Description                   |
+|------------|-----------|-------------------------------|
+| battleitem |           | Set Battle Item randomization |
+| helditems  |           | Set Held Items randomization  |
+| lane       |           | Set Lane randomization        |
 
 ## Bravery
 | Commands | Arguments | Description                                         |

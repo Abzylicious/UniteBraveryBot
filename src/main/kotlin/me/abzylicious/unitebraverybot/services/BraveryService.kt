@@ -21,7 +21,7 @@ class BraveryService(private val configuration: Configuration, private val pokem
     }
 
     private fun getRandomPokemon(): Pokemon {
-        val randomizer = Randomizer<Pokemon>()
+        val randomizer = Randomizer()
         val pokemon = pokemonService.getPokemon()
         return randomizer.selectRandom(pokemon).first()
     }
@@ -29,7 +29,7 @@ class BraveryService(private val configuration: Configuration, private val pokem
     private fun getRandomLane(guildId: Snowflake): Lane? {
         val randomize = configuration[guildId]?.randomizeLane ?: return null
         if (randomize) {
-            val randomizer = Randomizer<Lane>()
+            val randomizer = Randomizer()
             return randomizer.selectRandom(Lane.values().toList()).first()
         }
         return null
@@ -38,7 +38,7 @@ class BraveryService(private val configuration: Configuration, private val pokem
     private fun getRandomHeldItems(guildId: Snowflake): List<HeldItem>? {
         val randomize = configuration[guildId]?.randomizeHeldItems ?: return null
         if (randomize) {
-            val randomizer = Randomizer<HeldItem>()
+            val randomizer = Randomizer()
             return randomizer.selectRandom(HeldItem.values().toList(), 3)
         }
         return null
@@ -47,7 +47,7 @@ class BraveryService(private val configuration: Configuration, private val pokem
     private fun getRandomBattleItem(guildId: Snowflake): BattleItem? {
         val randomize = configuration[guildId]?.randomizeBattleItems ?: return null
         if (randomize) {
-            val randomizer = Randomizer<BattleItem>()
+            val randomizer = Randomizer()
             return randomizer.selectRandom(BattleItem.values().toList()).first()
         }
         return null

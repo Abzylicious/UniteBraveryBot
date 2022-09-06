@@ -10,7 +10,7 @@ import me.jakejmattson.discordkt.extensions.createMenu
 
 @Suppress("unused")
 fun braveryCommands(braveryService: BraveryService) = commands("Bravery") {
-    slash("roll", CommandDescriptions.BRAVERY_ROLL) {
+    slash("build", CommandDescriptions.BRAVERY_ROLL) {
         execute {
             val invokedBy = author
             val interactionResponse = interaction?.deferPublicResponse()

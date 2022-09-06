@@ -2,9 +2,9 @@ package me.abzylicious.unitebraverybot.util
 
 import java.security.SecureRandom
 
-class Randomizer<T>(private val randomizer: SecureRandom = SecureRandom()) {
+class Randomizer(private val randomizer: SecureRandom = SecureRandom()) {
 
-    fun selectRandom(pool: List<T>, drawCount: Int = 1) : List<T> {
+    fun <T> selectRandom(pool: List<T>, drawCount: Int = 1) : List<T> {
         if (pool.isEmpty())
             return emptyList()
 
