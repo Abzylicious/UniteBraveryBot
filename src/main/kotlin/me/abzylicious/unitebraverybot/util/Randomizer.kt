@@ -3,6 +3,7 @@ package me.abzylicious.unitebraverybot.util
 import java.security.SecureRandom
 
 class Randomizer(private val randomizer: SecureRandom = SecureRandom()) {
+    fun getRandomNumber(bound: Int) = randomizer.nextInt(bound)
 
     fun <T> selectRandom(pool: List<T>, drawCount: Int = 1) : List<T> {
         if (pool.isEmpty())
