@@ -25,7 +25,7 @@
 ## Bravery
 | Commands | Arguments | Description                                         |
 |----------|-----------|-----------------------------------------------------|
-| roll     |           | Get a spicy build for your next Pokemon Unite match |
+| build    |           | Get a spicy build for your next Pokemon Unite match |
 
 ## Utility
 | Commands | Arguments | Description                  |
