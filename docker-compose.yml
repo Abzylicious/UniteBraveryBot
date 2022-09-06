@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  unitebraverybot:
+    container_name: unitebraverybot
+    build:
+      dockerfile: Dockerfile
+      context: .
+    volumes:
+      - type: bind
+        source: ./data/config.json
+        target: /data/config.json
+      - type: bind
+        source: ./data/pokemon.json
+        target: /data/pokemon.json
+    restart: always
+    env_file:
+      - .env
+
+volumes:
+  unitebraveryboty:
