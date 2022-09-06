@@ -7,6 +7,7 @@ object BotConstants {
     const val CONFIGURATION_DATA_PATH = "data/config.json"
     const val POKEMON_DATA_PATH = "data/pokemon.json"
     const val PRESENCE_PLAYING = "with brave Pokemon picks & builds"
+    const val CONVERSATION_EXIT_COMMAND = "exit"
 }
 
 object Templates {

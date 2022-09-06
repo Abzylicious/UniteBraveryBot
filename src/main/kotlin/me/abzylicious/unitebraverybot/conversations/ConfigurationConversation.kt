@@ -17,7 +17,7 @@ import me.jakejmattson.discordkt.conversations.slashConversation
 import me.jakejmattson.discordkt.dsl.edit
 
 class ConfigurationConversation(private val configuration: Configuration) {
-    suspend fun createConfigurationConversation(guild: Guild) = slashConversation {
+    suspend fun createConfigurationConversation(guild: Guild) = slashConversation(BotConstants.CONVERSATION_EXIT_COMMAND) {
         val setPrefix = createConfigurationChoicePrompt(Labels.SETUP_PREFIX_TITLE, Messages.SETUP_PREFIX_DECISION)
         val prefix = if (setPrefix) {
             prompt(EveryArg) {
@@ -50,7 +50,7 @@ class ConfigurationConversation(private val configuration: Configuration) {
         respond(Messages.SETUP_COMPLETE.replace(Templates.GUILD_NAME, guild.name))
     }
 
-    suspend fun createLaneRandomizationConfigurationConversation(guildId: Snowflake) = slashConversation {
+    suspend fun createLaneRandomizationConfigurationConversation(guildId: Snowflake) = slashConversation(BotConstants.CONVERSATION_EXIT_COMMAND) {
         val randomizeLane = createConfigurationChoicePrompt(Labels.SETUP_RANDOMIZE_LANE_TITLE, Messages.SETUP_RANDOMIZE_LANE)
 
         configuration.edit {
@@ -60,7 +60,7 @@ class ConfigurationConversation(private val configuration: Configuration) {
         respond(createConfigurationChoicePromptSuccessMessage(Messages.CONFIGURATION_SET_LANE_RANDOMIZATION, randomizeLane))
     }
 
-    suspend fun createHeldItemsRandomizationConfigurationConversation(guildId: Snowflake) = slashConversation {
+    suspend fun createHeldItemsRandomizationConfigurationConversation(guildId: Snowflake) = slashConversation(BotConstants.CONVERSATION_EXIT_COMMAND) {
         val randomizeHeldItems = createConfigurationChoicePrompt(Labels.SETUP_RANDOMIZE_HELD_ITEMS_TITLE, Messages.SETUP_RANDOMIZE_HELD_ITEMS)
 
         configuration.edit {
@@ -70,7 +70,7 @@ class ConfigurationConversation(private val configuration: Configuration) {
         respond(createConfigurationChoicePromptSuccessMessage(Messages.CONFIGURATION_SET_HELD_ITEMS_RANDOMIZATION, randomizeHeldItems))
     }
 
-    suspend fun createBattleItemsRandomizationConfigurationConversation(guildId: Snowflake) = slashConversation {
+    suspend fun createBattleItemsRandomizationConfigurationConversation(guildId: Snowflake) = slashConversation(BotConstants.CONVERSATION_EXIT_COMMAND) {
         val randomizeBattleItems = createConfigurationChoicePrompt(Labels.SETUP_RANDOMIZE_BATTLE_ITEMS_TITLE, Messages.SETUP_RANDOMIZE_BATTLE_ITEMS)
 
         configuration.edit {
