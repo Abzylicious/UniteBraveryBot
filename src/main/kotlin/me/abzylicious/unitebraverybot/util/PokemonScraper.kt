@@ -2,6 +2,8 @@ package me.abzylicious.unitebraverybot.util
 
 import me.abzylicious.unitebraverybot.dataclasses.Pokemon
 import me.abzylicious.unitebraverybot.dataclasses.PokemonRole
+import me.abzylicious.unitebraverybot.services.PokemonImageService
+import me.jakejmattson.discordkt.annotations.Service
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
 import java.net.URL
@@ -19,7 +21,8 @@ private object Constants {
 
 data class RoleColor(val id: Int, val color: String)
 
-class PokemonScraper {
+@Service
+class PokemonScraper(private val pokemonImageService: PokemonImageService) {
     fun fetchAllPokemon(): List<Pokemon> {
         val document = Jsoup.connect(Constants.POKEMON_ROSTER_URL).get()
         val roster = document.getElementById(Constants.POKEMON_ROSTER_ID)
@@ -33,12 +36,14 @@ class PokemonScraper {
         return result
     }
 
-    private fun buildPokemon(element: Element, roleColors: List<RoleColor>) = Pokemon(
-        getPokemonName(element),
-        getPokemonRole(element, roleColors),
-        // Fixme: Get Pokemon image
-        ""
-    )
+    private fun buildPokemon(element: Element, roleColors: List<RoleColor>): Pokemon {
+        val pokemonName = getPokemonName(element)
+        return Pokemon(
+            pokemonName,
+            getPokemonRole(element, roleColors),
+            pokemonImageService.getImage(pokemonName)
+        )
+    }
 
     private fun getPokemonName(element: Element) = element.getElementsByClass(Constants.POKEMON_NAME_CLASS).text()
 
