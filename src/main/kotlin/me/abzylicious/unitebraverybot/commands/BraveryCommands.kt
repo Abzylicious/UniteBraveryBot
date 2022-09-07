@@ -14,7 +14,7 @@ fun braveryCommands(braveryService: BraveryService) = commands("Bravery") {
         execute {
             val invokedBy = author
             val interactionResponse = interaction?.deferPublicResponse()
-            channel.createMenu {createBraveryBuildEmbed(invokedBy, guild.id, braveryService) }
+            channel.createMenu { createBraveryBuildEmbed(invokedBy, guild.id, braveryService) }
             interactionResponse?.respond { content = Messages.BRAVERY_BUILD_RESULT }
         }
     }
