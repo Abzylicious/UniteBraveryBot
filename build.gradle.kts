@@ -1,7 +1,7 @@
 import java.util.Properties
 
 group = "me.abzylicious"
-version = "1.0-SNAPSHOT"
+version = "1.0.0"
 description = "A Discord bot heavily inspired by Ultimate Bravery to spice up your Pokemon Unite experience."
 
 plugins {
