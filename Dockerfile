@@ -3,7 +3,7 @@ COPY --chown=gradle:gradle . /unitebraverybot
 WORKDIR /unitebraverybot
 RUN gradle shadowJar --no-daemon
 
-FROM openjdk:11.0.8-jre-slim
+FROM openjdk:11.0.16-jre-slim
 RUN mkdir /data/
 COPY --from=build /unitebraverybot/build/libs/UniteBraveryBot.jar /
 
