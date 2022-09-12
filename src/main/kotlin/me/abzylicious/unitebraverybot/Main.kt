@@ -5,13 +5,12 @@ import dev.kord.common.entity.Permission
 import dev.kord.common.entity.Permissions
 import dev.kord.gateway.PrivilegedIntent
 import me.abzylicious.unitebraverybot.dataclasses.Configuration
-import me.abzylicious.unitebraverybot.dataclasses.PokemonEntries
+import me.abzylicious.unitebraverybot.dataclasses.PokemonPool
 import me.abzylicious.unitebraverybot.embeds.createBotInformationEmbed
 import me.abzylicious.unitebraverybot.locale.BotConstants
 import me.abzylicious.unitebraverybot.locale.Messages
 import me.abzylicious.unitebraverybot.locale.Templates
 import me.abzylicious.unitebraverybot.services.LoggingService
-import me.abzylicious.unitebraverybot.services.PokemonService
 import me.jakejmattson.discordkt.dsl.bot
 import java.awt.Color
 import java.lang.System.getenv
@@ -28,7 +27,7 @@ fun main(args: Array<String>) {
     bot(token) {
         val defaultPrefix = getenv(BotConstants.DEFAULT_PREFIX) ?: BotConstants.DEFAULT_PREFIX_VALUE
         val configuration = data(BotConstants.CONFIGURATION_DATA_PATH) { Configuration() }
-        data(BotConstants.POKEMON_DATA_PATH) { PokemonEntries() }
+        val pokemonPool = data(BotConstants.POKEMON_DATA_PATH) { PokemonPool() }
 
         prefix {
             guild?.let { configuration[it.id]?.prefix } ?: defaultPrefix
@@ -55,9 +54,7 @@ fun main(args: Array<String>) {
         onStart {
             val logger = this.getInjectionObjects(LoggingService::class)
             logger.logToAllGuilds(Messages.STARTUP_LOG)
-            val pokemonService = getInjectionObjects(PokemonService::class)
-            val pokemonCount = pokemonService.getPokemon().size
-            logger.logToAllGuilds(Messages.POKEMON_ROSTER_LOG.replace(Templates.POKEMON_COUNT, pokemonCount.toString()))
+            logger.logToAllGuilds(Messages.POKEMON_ROSTER_LOG.replace(Templates.POKEMON_COUNT, pokemonPool.pokemon.size.toString()))
         }
     }
 }

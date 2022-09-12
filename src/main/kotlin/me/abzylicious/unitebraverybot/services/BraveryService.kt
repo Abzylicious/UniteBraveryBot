@@ -6,7 +6,7 @@ import me.abzylicious.unitebraverybot.util.Randomizer
 import me.jakejmattson.discordkt.annotations.Service
 
 @Service
-class BraveryService(private val configuration: Configuration, private val pokemonService: PokemonService, private val pokemonImageService: PokemonImageService) {
+class BraveryService(private val configuration: Configuration, private val pokemonPool: PokemonPool) {
     fun getBraveryBuild(guildId: Snowflake?): BraveryBuild {
         return if (guildId != null) {
             BraveryBuild(
@@ -19,13 +19,10 @@ class BraveryService(private val configuration: Configuration, private val pokem
             BraveryBuild(getRandomPokemon())
         }
     }
-
+    
     private fun getRandomPokemon(): Pokemon {
         val randomizer = Randomizer()
-        val pokemon = pokemonService.getPokemon()
-        val randomPokemon = randomizer.selectRandom(pokemon).first()
-        val image = pokemonImageService.rollOnShiny(randomPokemon.imageUrl)
-        return randomPokemon.copy(imageUrl = image)
+        return randomizer.selectRandom(pokemonPool.pokemon).first()
     }
 
     private fun getRandomLane(guildId: Snowflake): Lane? {

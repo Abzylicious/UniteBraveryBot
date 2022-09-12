@@ -25,21 +25,13 @@ private object SpecialPokemon {
 class PokemonImageService {
     fun getImage(name: String): String {
         val pokemonName = getPokemonName(name)
-        val pokemonImageUrl = Constants.POKEMON_IMAGE_URL
-            .replace(Constants.POKEMON_TYPE_TEMPLATE, Constants.POKEMON_TYPE_NORMAL)
-            .replace(Constants.POKEMON_NAME_TEMPLATE, pokemonName)
+        val imageUrl = Constants.POKEMON_IMAGE_URL.replace(Constants.POKEMON_NAME_TEMPLATE, pokemonName)
+        val pokemonImageUrl = if (isShiny())
+            imageUrl.replace(Constants.POKEMON_TYPE_TEMPLATE, Constants.POKEMON_TYPE_SHINY)
+        else
+            imageUrl.replace(Constants.POKEMON_TYPE_TEMPLATE, Constants.POKEMON_TYPE_NORMAL)
 
         return if (isImage(pokemonImageUrl)) pokemonImageUrl else ""
-    }
-
-    fun rollOnShiny(pokemonImageUrl: String): String {
-        val randomizer = Randomizer()
-        val number = randomizer.getRandomNumber(Constants.POKEMON_SHINY_RATE)
-        return if (number == Constants.POKEMON_SHINY_LUCKY_NUMBER) {
-            pokemonImageUrl.replace(Constants.POKEMON_TYPE_NORMAL, Constants.POKEMON_TYPE_SHINY)
-        } else {
-            pokemonImageUrl
-        }
     }
 
     private fun getPokemonName(pokemonName: String) = when {
@@ -61,12 +53,19 @@ class PokemonImageService {
         .replace(" ", "")
         .replace('.', '-')
 
+    private fun isShiny(): Boolean {
+        val randomizer = Randomizer()
+        val number = randomizer.getRandomNumber(Constants.POKEMON_SHINY_RATE)
+        return number == Constants.POKEMON_SHINY_LUCKY_NUMBER
+    }
+
     private fun isImage(url: String): Boolean {
         return try {
             val imageUrl = URL(url)
             val image = ImageIO.read(imageUrl)
             image != null
         } catch (exception: IOException) {
+            println("Error :: \"$url\" is not a valid url.\nException :: $exception")
             false
         }
     }

@@ -9,28 +9,28 @@ import me.abzylicious.unitebraverybot.dataclasses.BraveryBuild
 import me.abzylicious.unitebraverybot.locale.Labels
 import me.abzylicious.unitebraverybot.locale.Templates
 import me.abzylicious.unitebraverybot.services.BraveryService
+import me.abzylicious.unitebraverybot.services.PokemonImageService
 import me.jakejmattson.discordkt.dsl.MenuBuilder
 import me.jakejmattson.discordkt.extensions.addField
 import me.jakejmattson.discordkt.extensions.fullName
 import me.jakejmattson.discordkt.extensions.pfpUrl
 
-suspend fun MenuBuilder.createBraveryBuildEmbed(author: User, guildId: Snowflake, braveryService: BraveryService) {
+suspend fun MenuBuilder.createBraveryBuildEmbed(author: User, guildId: Snowflake, braveryService: BraveryService, pokemonImageService: PokemonImageService) {
     val braveryBuild = braveryService.getBraveryBuild(guildId)
     page {
-        createBraveryBuildEmbed(author, braveryBuild)
+        createBraveryBuildEmbed(author, pokemonImageService, braveryBuild)
     }
     buttons {
         editButton(Labels.BRAVERY_BUILD_REROLL, Emojis.gameDie) {
             fields.clear()
             val newBraveryBuild = braveryService.getBraveryBuild(guildId)
-            createBraveryBuildEmbed(author, newBraveryBuild)
+            createBraveryBuildEmbed(author, pokemonImageService, newBraveryBuild)
         }
     }
 }
 
-private fun EmbedBuilder.createBraveryBuildEmbed(author: User, braveryBuild: BraveryBuild) {
-    val decodedColor = java.awt.Color.decode(braveryBuild.pokemon.role.color)
-    color = decodedColor.kColor
+private fun EmbedBuilder.createBraveryBuildEmbed(author: User, pokemonImageService: PokemonImageService, braveryBuild: BraveryBuild) {
+    color = braveryBuild.pokemon.getRoleColor().kColor
 
     author {
         name = author.fullName
@@ -38,7 +38,7 @@ private fun EmbedBuilder.createBraveryBuildEmbed(author: User, braveryBuild: Bra
     }
 
     thumbnail {
-        url = braveryBuild.pokemon.imageUrl
+        url = pokemonImageService.getImage(braveryBuild.pokemon.name)
     }
 
     title = Labels.BRAVERY_BUILD_TITLE
