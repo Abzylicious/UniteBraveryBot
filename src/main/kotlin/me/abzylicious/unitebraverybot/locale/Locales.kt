@@ -8,8 +8,6 @@ object BotConstants {
     const val POKEMON_DATA_PATH = "data/pokemon.json"
     const val PRESENCE_PLAYING = "with brave Pokemon picks & builds"
     const val CONVERSATION_EXIT_COMMAND = "exit"
-    private const val HOUR_IN_MS: Long = 1000 * 60 * 60
-    const val POKEMON_SYNC_INTERVAL: Long = HOUR_IN_MS * 24
 }
 
 object Templates {
@@ -20,7 +18,6 @@ object Templates {
     const val CHOICE = "%CHOICE%"
     const val POKEMON = "%POKEMON%"
     const val POKEMON_COUNT = "%POKEMON_COUNT%"
-    const val POKEMON_SYNC_INTERVAL = "%POKEMON_SYNC_INTERVAL%"
 }
 
 object Labels {
@@ -68,11 +65,8 @@ object Messages {
     const val CONFIGURATION_SET_HELD_ITEMS_RANDOMIZATION = "**${Templates.CHOICE}** Held Items randomization"
     const val CONFIGURATION_SET_BATTLE_ITEM_RANDOMIZATION = "**${Templates.CHOICE}** Battle Items randomization"
     const val BRAVERY_BUILD_RESULT = "Here is your bravery build"
-    const val SYNCHRONIZE_POKEMON_START = "\uD83D\uDD04 Synchronizing Pokemon"
-    const val SYNCHRONIZE_POKEMON_FETCH = "\uD83D\uDD04 Fetching Pokemon"
-    const val SYNCHRONIZE_POKEMON_UPDATING = "\uD83D\uDD04 Fetched **${Templates.POKEMON_COUNT}** pokemon! Updating data"
-    const val SYNCHRONIZE_POKEMON_DONE = "\u2705 Synchronization finished!"
-    const val STARTUP_LOG = "Bot successfully initialized! \uD83C\uDF89 Pokemon will be synchronized every **${Templates.POKEMON_SYNC_INTERVAL}**"
+    const val STARTUP_LOG = "\u2705 Bot successfully initialized"
+    const val POKEMON_ROSTER_LOG = "\u2139 There are **${Templates.POKEMON_COUNT}** pokemon available"
 }
 
 object CommandDescriptions {
