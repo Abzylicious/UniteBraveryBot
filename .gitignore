@@ -6,7 +6,7 @@ build/
 !**/src/test/**/build/
 
 ### Project ###
-data/
+data/config.json
 .env
 
 ### IntelliJ IDEA ###

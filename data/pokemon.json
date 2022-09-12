@@ -1,0 +1,165 @@
+{
+    "type": "me.abzylicious.unitebraverybot.dataclasses.PokemonPool",
+    "pokemon": [
+        {
+            "name": "Mew",
+            "role": "attacker"
+        },
+        {
+            "name": "Tyranitar",
+            "role": "all-rounder"
+        },
+        {
+            "name": "Buzzwole",
+            "role": "all-rounder"
+        },
+        {
+            "name": "Glaceon",
+            "role": "attacker"
+        },
+        {
+            "name": "Delphox",
+            "role": "attacker"
+        },
+        {
+            "name": "Espeon",
+            "role": "attacker"
+        },
+        {
+            "name": "Azumarill",
+            "role": "all-rounder"
+        },
+        {
+            "name": "Duraludon",
+            "role": "attacker"
+        },
+        {
+            "name": "Hoopa",
+            "role": "supporter"
+        },
+        {
+            "name": "Aegislash",
+            "role": "all-rounder"
+        },
+        {
+            "name": "Trevenant",
+            "role": "defender"
+        },
+        {
+            "name": "Dragonite",
+            "role": "all-rounder"
+        },
+        {
+            "name": "Tsareena",
+            "role": "all-rounder"
+        },
+        {
+            "name": "Decidueye",
+            "role": "attacker"
+        },
+        {
+            "name": "Greedent",
+            "role": "defender"
+        },
+        {
+            "name": "Sylveon",
+            "role": "attacker"
+        },
+        {
+            "name": "Mamoswine",
+            "role": "defender"
+        },
+        {
+            "name": "Blastoise",
+            "role": "defender"
+        },
+        {
+            "name": "Blissey",
+            "role": "supporter"
+        },
+        {
+            "name": "Gardevoir",
+            "role": "attacker"
+        },
+        {
+            "name": "Zeraora",
+            "role": "speedster"
+        },
+        {
+            "name": "Pikachu",
+            "role": "attacker"
+        },
+        {
+            "name": "Charizard",
+            "role": "all-rounder"
+        },
+        {
+            "name": "Snorlax",
+            "role": "defender"
+        },
+        {
+            "name": "Crustle",
+            "role": "defender"
+        },
+        {
+            "name": "Greninja",
+            "role": "attacker"
+        },
+        {
+            "name": "Eldegoss",
+            "role": "supporter"
+        },
+        {
+            "name": "Talonflame",
+            "role": "speedster"
+        },
+        {
+            "name": "Lucario",
+            "role": "all-rounder"
+        },
+        {
+            "name": "Venusaur",
+            "role": "attacker"
+        },
+        {
+            "name": "Mr. Mime",
+            "role": "supporter"
+        },
+        {
+            "name": "Slowbro",
+            "role": "defender"
+        },
+        {
+            "name": "Absol",
+            "role": "speedster"
+        },
+        {
+            "name": "Machamp",
+            "role": "all-rounder"
+        },
+        {
+            "name": "Wigglytuff",
+            "role": "supporter"
+        },
+        {
+            "name": "Alolan Ninetales",
+            "role": "attacker"
+        },
+        {
+            "name": "Cramorant",
+            "role": "attacker"
+        },
+        {
+            "name": "Gengar",
+            "role": "speedster"
+        },
+        {
+            "name": "Garchomp",
+            "role": "all-rounder"
+        },
+        {
+            "name": "Cinderace",
+            "role": "attacker"
+        }
+    ]
+}
