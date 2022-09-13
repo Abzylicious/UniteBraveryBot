@@ -1,10 +1,8 @@
 version: '3.8'
 services:
-  unitebraverybot:
+  bot:
     container_name: unitebraverybot
-    build:
-      dockerfile: Dockerfile
-      context: .
+    image: abzylicious/unitebraverybot:latest
     volumes:
       - type: bind
         source: ./data/config.json
