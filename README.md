@@ -15,16 +15,13 @@
 
 ## Features 🚀
 
-While **UniteBraveryBot 1.0.0** focuses on essential functionality, there might be more features to come in the future. Currently the following features are available:
-
 - Ultimate Bravery for Pokemon Unite
   - Get a random Pokemon you have to pick in your next match
   - Get a random lane you have to play on in your next match (if enabled for the guild)
   - Get randomized Held Items you have to pick for the given Pokemon (if enabled for the guild)
   - Get a random Battle Item you have to use in your next match (if enabled for the guild)
-- Always have the whole Pokemon roster available
-  - The Pokemon Roster is synchronized daily&#185; with the [official Pokemon roster](https://unite.pokemon.com/en-us/pokemon)
-  - Go shiny! For each roll there's the chance to get the shiny Pokemon sprite&#178; (chance **1:4096**)
+  - Get a randomized move set you have to use in your next match (if enabled for the guild)
+  - Go shiny! For each roll there's the chance to get the shiny Pokemon sprite&#185; (chance **1:4096**)
 - A permission system protects UniteBraveryBot to be abused by your members
 - Command invocations are logged (given a configured logging channel)
 - Multi Guild support
@@ -35,9 +32,7 @@ While **UniteBraveryBot 1.0.0** focuses on essential functionality, there might 
   - Each guild can configure its own randomization options
 - Dockerize the bot easily via the provided **Dockerfile** and **docker-compose.yml** file
 
-&#185; The synchronization interval can only be changed in [code](src/main/kotlin/me/abzylicious/unitebraverybot/locale/Locales.kt) since it's global for all guilds
-
-&#178; Sprites are provided by [https://pokemondb.net](https://pokemondb.net/sprites)
+&#185; Sprites are provided by [https://pokemondb.net](https://pokemondb.net/sprites)
 
 ## Commands 🤖
 
@@ -57,7 +52,7 @@ Get the Docker version you need [here](https://hub.docker.com/search?q=docker&ty
 
 ### Setup
 
-Since this bot has a **docker-compose.yml** file, all you need to start your own version of UniteBraveryBot locally is to `clone` this repository and set up the **.env** file.
+Since this bot has a [docker-compose.yml](docker-compose.yml) file and is hosted on [DockerHub](https://hub.docker.com/repository/docker/abzylicious/unitebraverybot), all you need to start your own version of UniteBraveryBot locally is to `clone` this repository and set up the **.env** file.
 
 The **.env** file is used to configure the bot token and the bot default prefix, in the following format:
 

@@ -13,7 +13,7 @@ private object PokemonRole {
 }
 
 @Serializable
-data class Pokemon(val name: String, val role: String) {
+data class Pokemon(val name: String, val role: String, val firstMoveOptions: List<String>, val secondMoveOptions: List<String>) {
     fun getRoleColor(): Color = when (role) {
         PokemonRole.SUPPORTER -> Color.decode("#fecc51")
         PokemonRole.ALL_ROUNDER -> Color.decode("#ce5fd3")

@@ -3,163 +3,485 @@
     "pokemon": [
         {
             "name": "Mew",
-            "role": "attacker"
+            "role": "attacker",
+            "firstMoveOptions": [
+                "Electro Ball",
+                "Solar Beam",
+                "Surf"
+            ],
+            "secondMoveOptions": [
+                "Coaching",
+                "Light Screen",
+                "Agility"
+            ]
         },
         {
             "name": "Tyranitar",
-            "role": "all-rounder"
+            "role": "all-rounder",
+            "firstMoveOptions": [
+                "Dark Pulse",
+                "Stone Edge"
+            ],
+            "secondMoveOptions": [
+                "Ancient Power",
+                "Sand Tomb"
+            ]
         },
         {
             "name": "Buzzwole",
-            "role": "all-rounder"
+            "role": "all-rounder",
+            "firstMoveOptions": [
+                "Lunge",
+                "Smack Down"
+            ],
+            "secondMoveOptions": [
+                "Leech Life",
+                "Superpower"
+            ]
         },
         {
             "name": "Glaceon",
-            "role": "attacker"
+            "role": "attacker",
+            "firstMoveOptions": [
+                "Icicle Spear",
+                "Icy Wind"
+            ],
+            "secondMoveOptions": [
+                "Ice Shard",
+                "Freeze-Dry"
+            ]
         },
         {
             "name": "Delphox",
-            "role": "attacker"
+            "role": "attacker",
+            "firstMoveOptions": [
+                "Fire Blast",
+                "Mystical Fire"
+            ],
+            "secondMoveOptions": [
+                "Fire Spin",
+                "Flame Charge"
+            ]
         },
         {
             "name": "Espeon",
-            "role": "attacker"
+            "role": "attacker",
+            "firstMoveOptions": [
+                "Psyshock",
+                "Stored Power"
+            ],
+            "secondMoveOptions": [
+                "Psybeam",
+                "Future Sight"
+            ]
         },
         {
             "name": "Azumarill",
-            "role": "all-rounder"
+            "role": "all-rounder",
+            "firstMoveOptions": [
+                "Play Rough",
+                "Water Pulse"
+            ],
+            "secondMoveOptions": [
+                "Whirlpool",
+                "Aqua Tail"
+            ]
         },
         {
             "name": "Duraludon",
-            "role": "attacker"
+            "role": "attacker",
+            "firstMoveOptions": [
+                "Flash Cannon",
+                "Dragon Pulse"
+            ],
+            "secondMoveOptions": [
+                "Dragon Tail",
+                "Stealth Rock"
+            ]
         },
         {
             "name": "Hoopa",
-            "role": "supporter"
+            "role": "supporter",
+            "firstMoveOptions": [
+                "Phantom Force",
+                "Shadow Ball"
+            ],
+            "secondMoveOptions": [
+                "Hyperspace Hole",
+                "Trick"
+            ]
         },
         {
             "name": "Aegislash",
-            "role": "all-rounder"
+            "role": "all-rounder",
+            "firstMoveOptions": [
+                "Sacred Sword",
+                "Shadow Claw"
+            ],
+            "secondMoveOptions": [
+                "Wide Guard",
+                "Iron Head"
+            ]
         },
         {
             "name": "Trevenant",
-            "role": "defender"
+            "role": "defender",
+            "firstMoveOptions": [
+                "Wood Hammer",
+                "Curse"
+            ],
+            "secondMoveOptions": [
+                "Horn Leech",
+                "Pain Split"
+            ]
         },
         {
             "name": "Dragonite",
-            "role": "all-rounder"
+            "role": "all-rounder",
+            "firstMoveOptions": [
+                "Dragon Dance",
+                "Extreme Speed"
+            ],
+            "secondMoveOptions": [
+                "Hyper Beam",
+                "Outrage"
+            ]
         },
         {
             "name": "Tsareena",
-            "role": "all-rounder"
+            "role": "all-rounder",
+            "firstMoveOptions": [
+                "Triple Axel",
+                "Stomp"
+            ],
+            "secondMoveOptions": [
+                "Trop Kick",
+                "Grassy Glide"
+            ]
         },
         {
             "name": "Decidueye",
-            "role": "attacker"
+            "role": "attacker",
+            "firstMoveOptions": [
+                "Razor Leaf",
+                "Spirit Shackle"
+            ],
+            "secondMoveOptions": [
+                "Leaf Storm",
+                "Shadow Sneak"
+            ]
         },
         {
             "name": "Greedent",
-            "role": "defender"
+            "role": "defender",
+            "firstMoveOptions": [
+                "Bullet Seed",
+                "Belch"
+            ],
+            "secondMoveOptions": [
+                "Stuff Cheeks",
+                "Covet"
+            ]
         },
         {
             "name": "Sylveon",
-            "role": "attacker"
+            "role": "attacker",
+            "firstMoveOptions": [
+                "Mystical Fire",
+                "Hyper Voice"
+            ],
+            "secondMoveOptions": [
+                "Draining Kiss",
+                "Calm Mind"
+            ]
         },
         {
             "name": "Mamoswine",
-            "role": "defender"
+            "role": "defender",
+            "firstMoveOptions": [
+                "Icicle Crash",
+                "Ice Fang"
+            ],
+            "secondMoveOptions": [
+                "High Horsepower",
+                "Earthquake"
+            ]
         },
         {
             "name": "Blastoise",
-            "role": "defender"
+            "role": "defender",
+            "firstMoveOptions": [
+                "Hydro Pump",
+                "Water Spout"
+            ],
+            "secondMoveOptions": [
+                "Surf",
+                "Rapid Spin"
+            ]
         },
         {
             "name": "Blissey",
-            "role": "supporter"
+            "role": "supporter",
+            "firstMoveOptions": [
+                "Egg Bomb",
+                "Helping Hand"
+            ],
+            "secondMoveOptions": [
+                "Soft-Boiled",
+                "Safeguard"
+            ]
         },
         {
             "name": "Gardevoir",
-            "role": "attacker"
+            "role": "attacker",
+            "firstMoveOptions": [
+                "Psychic",
+                "Moonblast"
+            ],
+            "secondMoveOptions": [
+                "Psyshock",
+                "Future Sight"
+            ]
         },
         {
             "name": "Zeraora",
-            "role": "speedster"
+            "role": "speedster",
+            "firstMoveOptions": [
+                "Volt Switch",
+                "Spark"
+            ],
+            "secondMoveOptions": [
+                "Discharge",
+                "Wild Charge"
+            ]
         },
         {
             "name": "Pikachu",
-            "role": "attacker"
+            "role": "attacker",
+            "firstMoveOptions": [
+                "Electro Ball",
+                "Thunder"
+            ],
+            "secondMoveOptions": [
+                "Volt Tackle",
+                "Thunderbolt"
+            ]
         },
         {
             "name": "Charizard",
-            "role": "all-rounder"
+            "role": "all-rounder",
+            "firstMoveOptions": [
+                "Flamethrower",
+                "Fire Punch"
+            ],
+            "secondMoveOptions": [
+                "Fire Blast",
+                "Flare Blitz"
+            ]
         },
         {
             "name": "Snorlax",
-            "role": "defender"
+            "role": "defender",
+            "firstMoveOptions": [
+                "Heavy Slam",
+                "Flail"
+            ],
+            "secondMoveOptions": [
+                "Block",
+                "Yawn"
+            ]
         },
         {
             "name": "Crustle",
-            "role": "defender"
+            "role": "defender",
+            "firstMoveOptions": [
+                "Rock Tomb",
+                "Shell Smash"
+            ],
+            "secondMoveOptions": [
+                "Stealth Rock",
+                "X-Scissor"
+            ]
         },
         {
             "name": "Greninja",
-            "role": "attacker"
+            "role": "attacker",
+            "firstMoveOptions": [
+                "Water Shuriken",
+                "Surf"
+            ],
+            "secondMoveOptions": [
+                "Double Team",
+                "Smokescreen"
+            ]
         },
         {
             "name": "Eldegoss",
-            "role": "supporter"
+            "role": "supporter",
+            "firstMoveOptions": [
+                "Pollen Puff",
+                "Leaf Tornado"
+            ],
+            "secondMoveOptions": [
+                "Cotton Guard",
+                "Cotton Spore"
+            ]
         },
         {
             "name": "Talonflame",
-            "role": "speedster"
+            "role": "speedster",
+            "firstMoveOptions": [
+                "Flame Charge",
+                "Aerial Ace"
+            ],
+            "secondMoveOptions": [
+                "Fly",
+                "Brave Bird"
+            ]
         },
         {
             "name": "Lucario",
-            "role": "all-rounder"
+            "role": "all-rounder",
+            "firstMoveOptions": [
+                "Extreme Speed",
+                "Power-Up Punch"
+            ],
+            "secondMoveOptions": [
+                "Bone Rush",
+                "Close Combat"
+            ]
         },
         {
             "name": "Venusaur",
-            "role": "attacker"
+            "role": "attacker",
+            "firstMoveOptions": [
+                "Sludge Bomb",
+                "Giga Drain"
+            ],
+            "secondMoveOptions": [
+                "Solar Beam",
+                "Petal Dance"
+            ]
         },
         {
             "name": "Mr. Mime",
-            "role": "supporter"
+            "role": "supporter",
+            "firstMoveOptions": [
+                "Confusion",
+                "Psychic"
+            ],
+            "secondMoveOptions": [
+                "Barrier",
+                "Power Swap"
+            ]
         },
         {
             "name": "Slowbro",
-            "role": "defender"
+            "role": "defender",
+            "firstMoveOptions": [
+                "Scald",
+                "Surf"
+            ],
+            "secondMoveOptions": [
+                "Amnesia",
+                "Telekinesis"
+            ]
         },
         {
             "name": "Absol",
-            "role": "speedster"
+            "role": "speedster",
+            "firstMoveOptions": [
+                "Night Slash",
+                "Pursuit"
+            ],
+            "secondMoveOptions": [
+                "Psycho Cut",
+                "Sucker Punch"
+            ]
         },
         {
             "name": "Machamp",
-            "role": "all-rounder"
+            "role": "all-rounder",
+            "firstMoveOptions": [
+                "Close Combat",
+                "Cross Chop"
+            ],
+            "secondMoveOptions": [
+                "Dynamic Punch",
+                "Submission"
+            ]
         },
         {
             "name": "Wigglytuff",
-            "role": "supporter"
+            "role": "supporter",
+            "firstMoveOptions": [
+                "Double Slap",
+                "Dazzling Gleam"
+            ],
+            "secondMoveOptions": [
+                "Rollout",
+                "Sing"
+            ]
         },
         {
             "name": "Alolan Ninetales",
-            "role": "attacker"
+            "role": "attacker",
+            "firstMoveOptions": [
+                "Avalanche",
+                "Dazzling Gleam"
+            ],
+            "secondMoveOptions": [
+                "Blizzard",
+                "Aurora Veil"
+            ]
         },
         {
             "name": "Cramorant",
-            "role": "attacker"
+            "role": "attacker",
+            "firstMoveOptions": [
+                "Surf",
+                "Dive"
+            ],
+            "secondMoveOptions": [
+                "Hurricane",
+                "Air Slash"
+            ]
         },
         {
             "name": "Gengar",
-            "role": "speedster"
+            "role": "speedster",
+            "firstMoveOptions": [
+                "Shadow Ball",
+                "Sludge Bomb"
+            ],
+            "secondMoveOptions": [
+                "Dream Eater",
+                "Hex"
+            ]
         },
         {
             "name": "Garchomp",
-            "role": "all-rounder"
+            "role": "all-rounder",
+            "firstMoveOptions": [
+                "Dig",
+                "Dragon Rush"
+            ],
+            "secondMoveOptions": [
+                "Earthquake",
+                "Dragon Claw"
+            ]
         },
         {
             "name": "Cinderace",
-            "role": "attacker"
+            "role": "attacker",
+            "firstMoveOptions": [
+                "Pyro Ball",
+                "Blaze Kick"
+            ],
+            "secondMoveOptions": [
+                "Flame Charge",
+                "Feint"
+            ]
         }
     ]
 }

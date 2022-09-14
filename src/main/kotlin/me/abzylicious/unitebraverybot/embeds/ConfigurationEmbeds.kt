@@ -3,12 +3,12 @@ package me.abzylicious.unitebraverybot.embeds
 import dev.kord.core.entity.Guild
 import dev.kord.rest.Image
 import dev.kord.rest.builder.message.EmbedBuilder
+import dev.kord.x.emoji.Emojis
 import me.abzylicious.unitebraverybot.dataclasses.GuildConfiguration
 import me.abzylicious.unitebraverybot.locale.Labels
 import me.abzylicious.unitebraverybot.locale.Templates
 import me.jakejmattson.discordkt.Discord
 import me.jakejmattson.discordkt.extensions.addField
-import me.jakejmattson.discordkt.extensions.addInlineField
 import me.jakejmattson.discordkt.extensions.pfpUrl
 import me.jakejmattson.discordkt.extensions.toSnowflake
 
@@ -35,7 +35,15 @@ suspend fun EmbedBuilder.createConfigurationEmbed(discord: Discord, guild: Guild
     addField(Labels.CONFIGURATION_PREFIX, guildConfiguration.prefix)
     addField(Labels.CONFIGURATION_ADMIN_ROLE, guild.getRole(guildConfiguration.adminRole.toSnowflake()).mention)
     addField(Labels.CONFIGURATION_LOGGING_CHANNEL, guild.getChannel(guildConfiguration.loggingChannel.toSnowflake()).mention)
-    addInlineField(Labels.CONFIGURATION_LANE_RANDOMIZATION, if (guildConfiguration.randomizeLane) Labels.YES else Labels.NO)
-    addInlineField(Labels.CONFIGURATION_HELD_ITEMS_RANDOMIZATION, if (guildConfiguration.randomizeHeldItems) Labels.YES else Labels.NO)
-    addInlineField(Labels.CONFIGURATION_BATTLE_ITEM_RANDOMIZATION, if (guildConfiguration.randomizeBattleItems) Labels.YES else Labels.NO)
+    field {
+        name = Labels.CONFIGURATION_RANDOMIZER_OPTIONS
+        value = "```" +
+                "${Labels.CONFIGURATION_LANE_RANDOMIZATION}: ${toOptionText(guildConfiguration.randomizeLane)}\n" +
+                "${Labels.CONFIGURATION_HELD_ITEMS_RANDOMIZATION}: ${toOptionText(guildConfiguration.randomizeHeldItems)}\n" +
+                "${Labels.CONFIGURATION_BATTLE_ITEM_RANDOMIZATION}: ${toOptionText(guildConfiguration.randomizeBattleItems)}\n" +
+                "${Labels.CONFIGURATION_MOVES_RANDOMIZATION}: ${toOptionText(guildConfiguration.randomizeMoves)}" +
+                "```"
+    }
 }
+
+private fun toOptionText(option: Boolean) = if (option) "${Labels.YES} ${Emojis.whiteCheckMark}" else "${Labels.NO} ${Emojis.x}"

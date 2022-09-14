@@ -12,6 +12,7 @@ import me.abzylicious.unitebraverybot.services.BraveryService
 import me.abzylicious.unitebraverybot.services.PokemonImageService
 import me.jakejmattson.discordkt.dsl.MenuBuilder
 import me.jakejmattson.discordkt.extensions.addField
+import me.jakejmattson.discordkt.extensions.addInlineField
 import me.jakejmattson.discordkt.extensions.fullName
 import me.jakejmattson.discordkt.extensions.pfpUrl
 
@@ -52,4 +53,9 @@ private fun EmbedBuilder.createBraveryBuildEmbed(author: User, pokemonImageServi
 
     if (braveryBuild.battleItem != null)
         addField(Labels.BRAVERY_BUILD_BATTLE_ITEMS, braveryBuild.battleItem.item)
+
+    if (braveryBuild.moves != null) {
+        addInlineField(Labels.BRAVERY_BUILD_SECOND_MOVE, braveryBuild.moves.first)
+        addInlineField(Labels.BRAVERY_BUILD_SECOND_MOVE, braveryBuild.moves.second)
+    }
 }

@@ -21,6 +21,7 @@
 | battleitem |           | Set Battle Item randomization |
 | helditems  |           | Set Held Items randomization  |
 | lane       |           | Set Lane randomization        |
+| moves      |           | Set Moves randomization       |
 
 ## Bravery
 | Commands | Arguments | Description                                         |

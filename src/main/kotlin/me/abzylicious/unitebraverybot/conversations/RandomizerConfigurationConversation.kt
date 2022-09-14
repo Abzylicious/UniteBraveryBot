@@ -41,6 +41,16 @@ class RandomizerConfigurationConversation(private val configuration: Configurati
         respond(createConfigurationChoicePromptSuccessMessage(Messages.CONFIGURATION_SET_BATTLE_ITEM_RANDOMIZATION, randomizeBattleItems))
     }
 
+    suspend fun createMovesRandomizationConfigurationConversation(guildId: Snowflake) = slashConversation(BotConstants.CONVERSATION_EXIT_COMMAND) {
+        val randomizeMoves = createConfigurationChoicePrompt(Labels.SETUP_RANDOMIZE_MOVES_TITLE, Messages.SETUP_RANDOMIZE_MOVES)
+
+        configuration.edit {
+            configuration[guildId]!!.randomizeMoves = randomizeMoves
+        }
+
+        respond(createConfigurationChoicePromptSuccessMessage(Messages.CONFIGURATION_SET_MOVES_RANDOMIZATION, randomizeMoves))
+    }
+
     private fun createConfigurationChoicePromptSuccessMessage(message: String, choice: Boolean): String {
         val choiceText = if (choice) Labels.ENABLED else Labels.DISABLED
         return message.replace(Templates.CHOICE, choiceText)
