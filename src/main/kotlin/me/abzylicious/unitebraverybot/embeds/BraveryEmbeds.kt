@@ -55,7 +55,7 @@ private fun EmbedBuilder.createBraveryBuildEmbed(author: User, pokemonImageServi
         addField(Labels.BRAVERY_BUILD_BATTLE_ITEMS, braveryBuild.battleItem.item)
 
     if (braveryBuild.moves != null) {
-        addInlineField(Labels.BRAVERY_BUILD_SECOND_MOVE, braveryBuild.moves.first)
+        addInlineField(Labels.BRAVERY_BUILD_FIRST_MOVE, braveryBuild.moves.first)
         addInlineField(Labels.BRAVERY_BUILD_SECOND_MOVE, braveryBuild.moves.second)
     }
 }
