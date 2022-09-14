@@ -7,17 +7,15 @@ import me.jakejmattson.discordkt.annotations.Service
 
 @Service
 class BraveryService(private val configuration: Configuration, private val pokemonPool: PokemonPool) {
-    fun getBraveryBuild(guildId: Snowflake?): BraveryBuild {
-        return if (guildId != null) {
-            BraveryBuild(
-                getRandomPokemon(),
-                getRandomLane(guildId),
-                getRandomHeldItems(guildId),
-                getRandomBattleItem(guildId)
-            )
-        } else {
-            BraveryBuild(getRandomPokemon())
-        }
+    fun getBraveryBuild(guildId: Snowflake): BraveryBuild {
+        val randomPokemon = getRandomPokemon()
+        return BraveryBuild(
+            randomPokemon,
+            getRandomLane(guildId),
+            getRandomHeldItems(guildId),
+            getRandomBattleItem(guildId),
+            getRandomMoves(guildId, randomPokemon),
+        )
     }
     
     private fun getRandomPokemon(): Pokemon {
@@ -48,6 +46,17 @@ class BraveryService(private val configuration: Configuration, private val pokem
         if (randomize) {
             val randomizer = Randomizer()
             return randomizer.selectRandom(BattleItem.values().toList()).first()
+        }
+        return null
+    }
+
+    private fun getRandomMoves(guildId: Snowflake, pokemon: Pokemon): Pair<String, String>? {
+        val randomize = configuration[guildId]?.randomizeMoves ?: return null
+        if (randomize) {
+            val randomizer = Randomizer()
+            val firstMove = randomizer.selectRandom(pokemon.firstMoveOptions).first()
+            val secondMove = randomizer.selectRandom(pokemon.secondMoveOptions).first()
+            return Pair(firstMove, secondMove)
         }
         return null
     }

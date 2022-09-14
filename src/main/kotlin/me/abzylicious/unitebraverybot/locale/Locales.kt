@@ -46,6 +46,8 @@ object Labels {
     const val BRAVERY_BUILD_LANE = "Lane"
     const val BRAVERY_BUILD_HELD_ITEMS = "Held Items"
     const val BRAVERY_BUILD_BATTLE_ITEMS = "Battle Item"
+    const val BRAVERY_BUILD_FIRST_MOVE = "First Move"
+    const val BRAVERY_BUILD_SECOND_MOVE = "Second Move"
     const val BRAVERY_BUILD_REROLL = "Reroll"
 }
 
