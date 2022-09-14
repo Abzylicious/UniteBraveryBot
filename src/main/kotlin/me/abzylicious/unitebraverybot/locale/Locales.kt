@@ -36,6 +36,7 @@ object Labels {
     const val CONFIGURATION_PREFIX = "Bot Prefix"
     const val CONFIGURATION_ADMIN_ROLE = "Admin Role"
     const val CONFIGURATION_LOGGING_CHANNEL = "Logging Channel"
+    const val CONFIGURATION_RANDOMIZER_OPTIONS = "Randomizer Options"
     const val CONFIGURATION_LANE_RANDOMIZATION = "Randomize Lane"
     const val CONFIGURATION_HELD_ITEMS_RANDOMIZATION = "Randomize Held Items"
     const val CONFIGURATION_BATTLE_ITEM_RANDOMIZATION = "Randomize Battle Items"
