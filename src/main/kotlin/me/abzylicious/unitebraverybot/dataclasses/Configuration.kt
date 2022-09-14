@@ -26,7 +26,8 @@ data class Configuration (val guildConfigurations: MutableMap<Snowflake, GuildCo
         loggingChannel: Channel,
         randomizeLane: Boolean,
         randomizeHeldItems: Boolean,
-        randomizeBattleItems: Boolean
+        randomizeBattleItems: Boolean,
+        randomizeMoves: Boolean
     ) {
         if (hasGuildConfiguration(guildId)) return
 
@@ -37,7 +38,8 @@ data class Configuration (val guildConfigurations: MutableMap<Snowflake, GuildCo
             loggingChannel.id.value.toString(),
             randomizeLane,
             randomizeHeldItems,
-            randomizeBattleItems
+            randomizeBattleItems,
+            randomizeMoves
         )
 
         edit {
@@ -54,5 +56,6 @@ data class GuildConfiguration(
     var loggingChannel: String = "insert_id",
     var randomizeLane: Boolean = false,
     var randomizeHeldItems: Boolean = false,
-    var randomizeBattleItems: Boolean = false
+    var randomizeBattleItems: Boolean = false,
+    var randomizeMoves: Boolean = false
 )

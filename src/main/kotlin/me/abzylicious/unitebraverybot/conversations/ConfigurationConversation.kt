@@ -41,7 +41,8 @@ class ConfigurationConversation(private val configuration: Configuration) {
             loggingChannel,
             randomizeLane,
             randomizeHeldItems,
-            randomizeBattleItems
+            randomizeBattleItems,
+            false
         )
 
         respond(Messages.SETUP_COMPLETE.replace(Templates.GUILD_NAME, guild.name))
