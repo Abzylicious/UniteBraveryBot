@@ -33,6 +33,7 @@ class ConfigurationConversation(private val configuration: Configuration) {
         val randomizeLane = createConfigurationChoicePrompt(Labels.SETUP_RANDOMIZE_LANE_TITLE, Messages.SETUP_RANDOMIZE_LANE)
         val randomizeHeldItems = createConfigurationChoicePrompt(Labels.SETUP_RANDOMIZE_HELD_ITEMS_TITLE, Messages.SETUP_RANDOMIZE_HELD_ITEMS)
         val randomizeBattleItems = createConfigurationChoicePrompt(Labels.SETUP_RANDOMIZE_BATTLE_ITEMS_TITLE, Messages.SETUP_RANDOMIZE_BATTLE_ITEMS)
+        val randomizeMoves = createConfigurationChoicePrompt(Labels.SETUP_RANDOMIZE_MOVES_TITLE, Messages.SETUP_RANDOMIZE_MOVES)
 
         configuration.setup(
             guild.id,
@@ -42,7 +43,7 @@ class ConfigurationConversation(private val configuration: Configuration) {
             randomizeLane,
             randomizeHeldItems,
             randomizeBattleItems,
-            false
+            randomizeMoves
         )
 
         respond(Messages.SETUP_COMPLETE.replace(Templates.GUILD_NAME, guild.name))
