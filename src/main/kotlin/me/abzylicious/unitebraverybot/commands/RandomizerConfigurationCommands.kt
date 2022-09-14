@@ -48,4 +48,16 @@ fun randomizerConfigurationCommands(configuration: Configuration) = subcommand("
                 .startSlashResponse(discord, author, this)
         }
     }
+    sub("moves", CommandDescriptions.RANDOMIZER_MOVES_RANDOMIZATION) {
+        execute {
+            if (!configuration.hasGuildConfiguration(guild.id)) {
+                respond(Messages.GUILD_CONFIGURATION_NOT_FOUND)
+                return@execute
+            }
+
+            RandomizerConfigurationConversation(configuration)
+                .createMovesRandomizationConfigurationConversation(guild.id)
+                .startSlashResponse(discord, author, this)
+        }
+    }
 }

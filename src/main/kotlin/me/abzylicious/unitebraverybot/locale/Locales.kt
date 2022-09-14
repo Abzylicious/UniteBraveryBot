@@ -39,6 +39,7 @@ object Labels {
     const val CONFIGURATION_LANE_RANDOMIZATION = "Randomize Lane"
     const val CONFIGURATION_HELD_ITEMS_RANDOMIZATION = "Randomize Held Items"
     const val CONFIGURATION_BATTLE_ITEM_RANDOMIZATION = "Randomize Battle Items"
+    const val CONFIGURATION_MOVES_RANDOMIZATION = "Randomize Moves"
     const val BRAVERY_BUILD_TITLE = "Your Pokemon has been chosen!"
     const val BRAVERY_BUILD_DESCRIPTION = "During your next match you have to pick the following Pokemon: **${Templates.POKEMON}**"
     const val BRAVERY_BUILD_LANE = "Lane"
@@ -66,6 +67,7 @@ object Messages {
     const val CONFIGURATION_SET_LANE_RANDOMIZATION = "**${Templates.CHOICE}** Lane randomization"
     const val CONFIGURATION_SET_HELD_ITEMS_RANDOMIZATION = "**${Templates.CHOICE}** Held Items randomization"
     const val CONFIGURATION_SET_BATTLE_ITEM_RANDOMIZATION = "**${Templates.CHOICE}** Battle Items randomization"
+    const val CONFIGURATION_SET_MOVES_RANDOMIZATION = "**${Templates.CHOICE}** Moves randomization"
     const val BRAVERY_BUILD_RESULT = "Here is your bravery build"
     const val STARTUP_LOG = "\u2705 Bot successfully initialized"
     const val POKEMON_ROSTER_LOG = "\u2139 There are **${Templates.POKEMON_COUNT}** pokemon available"
@@ -81,5 +83,6 @@ object CommandDescriptions {
     const val RANDOMIZER_LANE_RANDOMIZATION = "Set Lane randomization"
     const val RANDOMIZER_HELD_ITEMS_RANDOMIZATION = "Set Held Items randomization"
     const val RANDOMIZER_BATTLE_ITEM_RANDOMIZATION = "Set Battle Item randomization"
+    const val RANDOMIZER_MOVES_RANDOMIZATION = "Set Moves randomization"
     const val BRAVERY_ROLL = "Get a spicy build for your next Pokemon Unite match"
 }
