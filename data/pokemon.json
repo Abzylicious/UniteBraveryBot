@@ -2,6 +2,18 @@
     "type": "me.abzylicious.unitebraverybot.dataclasses.PokemonPool",
     "pokemon": [
         {
+            "name": "Dodrio",
+            "role": "speedster",
+            "firstMoveOptions": [
+                "Tri Attack",
+                "Drill Peck"
+            ],
+            "secondMoveOptions": [
+                "Agility",
+                "Jump Kick"
+            ]
+        },
+        {
             "name": "Mew",
             "role": "attacker",
             "firstMoveOptions": [
