@@ -2,6 +2,18 @@
     "type": "me.abzylicious.unitebraverybot.dataclasses.PokemonPool",
     "pokemon": [
         {
+            "name": "Clefable",
+            "role": "supporter",
+            "firstMoveOptions": [
+                "Moonlight",
+                "Draining Kiss"
+            ],
+            "secondMoveOptions": [
+                "Gravity",
+                "Follow Me"
+            ]
+        },
+        {
             "name": "Scizor",
             "role": "all-rounder",
             "firstMoveOptions": [
