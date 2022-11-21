@@ -2,6 +2,18 @@
     "type": "me.abzylicious.unitebraverybot.dataclasses.PokemonPool",
     "pokemon": [
         {
+            "name": "Sableye",
+            "role": "supporter",
+            "firstMoveOptions": [
+                "Knock Off",
+                "Shadow Sneak"
+            ],
+            "secondMoveOptions": [
+                "Feint Attack",
+                "Confuse Ray"
+            ]
+        },
+        {
             "name": "Zoroark",
             "role": "speedster",
             "firstMoveOptions": [
