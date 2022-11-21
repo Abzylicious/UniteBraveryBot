@@ -2,6 +2,18 @@
     "type": "me.abzylicious.unitebraverybot.dataclasses.PokemonPool",
     "pokemon": [
         {
+            "name": "Zoroark",
+            "role": "speedster",
+            "firstMoveOptions": [
+                "Shadow Claw",
+                "Cut"
+            ],
+            "secondMoveOptions": [
+                "Night Slash",
+                "Feint Attack"
+            ]
+        },
+        {
             "name": "Clefable",
             "role": "supporter",
             "firstMoveOptions": [
