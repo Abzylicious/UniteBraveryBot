@@ -2,6 +2,76 @@
     "type": "me.abzylicious.unitebraverybot.dataclasses.PokemonPool",
     "pokemon": [
         {
+            "name": "Sableye",
+            "role": "supporter",
+            "firstMoveOptions": [
+                "Knock Off",
+                "Shadow Sneak"
+            ],
+            "secondMoveOptions": [
+                "Feint Attack",
+                "Confuse Ray"
+            ]
+        },
+        {
+            "name": "Zoroark",
+            "role": "speedster",
+            "firstMoveOptions": [
+                "Shadow Claw",
+                "Cut"
+            ],
+            "secondMoveOptions": [
+                "Night Slash",
+                "Feint Attack"
+            ]
+        },
+        {
+            "name": "Clefable",
+            "role": "supporter",
+            "firstMoveOptions": [
+                "Moonlight",
+                "Draining Kiss"
+            ],
+            "secondMoveOptions": [
+                "Gravity",
+                "Follow Me"
+            ]
+        },
+        {
+            "name": "Scizor",
+            "role": "all-rounder",
+            "firstMoveOptions": [
+                "Bullet Punch"
+            ],
+            "secondMoveOptions": [
+                "Double Hit",
+                "Swords Dance"
+            ]
+        },
+        {
+            "name": "Scyther",
+            "role": "all-rounder",
+            "firstMoveOptions": [
+                "Dual Wingbeat"
+            ],
+            "secondMoveOptions": [
+                "Double Hit",
+                "Swords Dance"
+            ]
+        },
+        {
+            "name": "Dodrio",
+            "role": "speedster",
+            "firstMoveOptions": [
+                "Tri Attack",
+                "Drill Peck"
+            ],
+            "secondMoveOptions": [
+                "Agility",
+                "Jump Kick"
+            ]
+        },
+        {
             "name": "Mew",
             "role": "attacker",
             "firstMoveOptions": [
